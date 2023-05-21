@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
+const BASE_BACKEND_URL= process.env.REACT_APP_BACKEND_URL;
 
 const FileUploader = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -16,7 +17,7 @@ const FileUploader = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/upload-multiple', formData, {
+      await axios.post(`${BASE_BACKEND_URL}/upload-multiple`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
