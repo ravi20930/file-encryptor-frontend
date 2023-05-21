@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-const BASE_BACKEND_URL= process.env.BACKEND_URL;
+const BASE_BACKEND_URL= process.env.REACT_APP_BACKEND_URL;
 
 const FileHandler = () => {
   const [encryptedFiles, setEncryptedFiles] = useState([]);
